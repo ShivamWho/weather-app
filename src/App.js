@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Weather from "./component/weather.component";
 import Form from "./component/form.component";
+import LoginPage from "./component/login";
 
 class App extends React.Component {
   constructor() {
@@ -108,6 +109,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <LoginPage />
         <Form loadweather={this.getWeather} error={this.state.error} />
         <Weather
           city={this.state.city}
